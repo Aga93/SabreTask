@@ -17,7 +17,6 @@ namespace ProcessedInputText
 
             List<string> outputText = new List<string>();
             foreach (string line in inputText)
-
             {
                 if (line != null && line.Length > 0)
                 {
@@ -27,7 +26,6 @@ namespace ProcessedInputText
                 {
                     continue;
                 }
-
             }
             return outputText;
         }

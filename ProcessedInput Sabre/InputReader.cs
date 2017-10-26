@@ -44,8 +44,8 @@ namespace ProcessedInputText
         public static List<string> ReadTextFromFile()
         {
             List<string> textFromFile = new List<string>();
-            //Console.WriteLine("Write Path to file.");
-            using (StreamReader fileWithTextToProcessed = new StreamReader("C:/Users/Aga/Desktop/Pan_Tadeusz.txt"/*Console.ReadLine()*/))
+            Console.WriteLine("Write Path to file.");
+            using (StreamReader fileWithTextToProcessed = new StreamReader(Console.ReadLine()))
             {
                 string singleLineFromText;
                 while ((singleLineFromText = fileWithTextToProcessed.ReadLine()) != null)
