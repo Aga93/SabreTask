@@ -1,0 +1,7 @@
+C:\Users\Aga\source\repos\ProcessedInput Sabre\ProcessedInput Sabre\obj\Debug\ProcessedInput Sabre.csprojResolveAssemblyReference.cache
+C:\Users\Aga\source\repos\ProcessedInput Sabre\ProcessedInput Sabre\obj\Debug\ProcessedInput Sabre.csproj.CoreCompileInputs.cache
+C:\Users\Aga\source\repos\ProcessedInput Sabre\ProcessedInput Sabre\bin\Debug\ProcessedInput Sabre.exe.config
+C:\Users\Aga\source\repos\ProcessedInput Sabre\ProcessedInput Sabre\bin\Debug\ProcessedInput Sabre.exe
+C:\Users\Aga\source\repos\ProcessedInput Sabre\ProcessedInput Sabre\bin\Debug\ProcessedInput Sabre.pdb
+C:\Users\Aga\source\repos\ProcessedInput Sabre\ProcessedInput Sabre\obj\Debug\ProcessedInput Sabre.exe
+C:\Users\Aga\source\repos\ProcessedInput Sabre\ProcessedInput Sabre\obj\Debug\ProcessedInput Sabre.pdb
