@@ -11,6 +11,7 @@ namespace ProcessedInputText
     {
         static void Main(string[] args)
         {
+            InputTextReader.parameter = args;
             List<string> inputText = InputTextReader.GetInputText();
 
             List<string> processedText = TextProcessor.ReplaceText(inputText);

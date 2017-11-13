@@ -9,6 +9,8 @@ namespace ProcessedInputText
 {
     class InputTextReader
     {
+        public static string[] parameter;
+
         public static List<string> GetInputText()
         {
             List<string> inputText = new List<string>();
@@ -20,7 +22,7 @@ namespace ProcessedInputText
 
             if (userInput.Length == 0)
             {
-                return null;
+               userInput.DefaultIfEmpty();  //return null;
             }
             else if (userInput[0] == "1")
             {
@@ -44,8 +46,8 @@ namespace ProcessedInputText
         public static List<string> ReadTextFromFile()
         {
             List<string> textFromFile = new List<string>();
-            Console.WriteLine("Write Path to file.");
-            using (StreamReader fileWithTextToProcessed = new StreamReader(Console.ReadLine()))
+            //Console.WriteLine("Write Path to file.");
+            using (StreamReader fileWithTextToProcessed = new StreamReader(parameter[0]/*"C:/Users/Aga/Desktop/Pan_Tadeusz.txt"/*Console.ReadLine()*/))
             {
                 string singleLineFromText;
                 while ((singleLineFromText = fileWithTextToProcessed.ReadLine()) != null)

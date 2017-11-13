@@ -9,7 +9,6 @@ namespace ProcessedInputText
 {
     class OutputWriter
     {
-
         public static void SelectOutputType(List<string> text)
         {
             Console.WriteLine("Enter 1 to write to file, Enter 2 to write to console");
