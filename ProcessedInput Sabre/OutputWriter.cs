@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProcessedInputText
 {
@@ -17,7 +14,6 @@ namespace ProcessedInputText
             if (userInput == "1")
             {
                 SaveTextToFile(text);
-
             }
             else if (userInput == "2")
             {

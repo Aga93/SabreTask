@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+﻿using System.Collections.Generic;
+
 
 namespace ProcessedInputText
 {
@@ -11,10 +7,9 @@ namespace ProcessedInputText
     {
         static void Main(string[] args)
         {
-            InputTextReader.parameter = args;
-            List<string> inputText = InputTextReader.GetInputText();
+            List<string> inputText = InputTextReader.GetInputText(args);
 
-            List<string> processedText = TextProcessor.ReplaceText(inputText);
+            List<string> processedText = Replacer.ReplaceText(inputText);
 
             OutputWriter.SelectOutputType(processedText);
         }

@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProcessedInputText
 {
     class InputTextReader
     {
-        public static string[] parameter;
-
-        public static List<string> GetInputText()
+        public static List<string> GetInputText(string[] parameter)
         {
             List<string> inputText = new List<string>();
             Console.WriteLine("Use following format to read - x:y:z");
@@ -20,13 +15,13 @@ namespace ProcessedInputText
             Console.WriteLine("z - optional, number of lines to use.");
             string[] userInput = Console.ReadLine().Split(':');
 
-            if (userInput.Length == 0)
+            if (userInput.Length == 1 && userInput[0].Equals(string.Empty))
             {
-               userInput.DefaultIfEmpty();  //return null;
+                return GetInputText(parameter);
             }
             else if (userInput[0] == "1")
             {
-                inputText = ReadTextFromFile();
+                inputText = ReadTextFromFile(parameter);
             }
             else if (userInput[0] == "2")
             {
@@ -43,11 +38,12 @@ namespace ProcessedInputText
             }
             return null;
         }
-        public static List<string> ReadTextFromFile()
+        public static List<string> ReadTextFromFile(string[] parameter)
         {
             List<string> textFromFile = new List<string>();
-            //Console.WriteLine("Write Path to file.");
-            using (StreamReader fileWithTextToProcessed = new StreamReader(parameter[0]/*"C:/Users/Aga/Desktop/Pan_Tadeusz.txt"/*Console.ReadLine()*/))
+           
+            
+            using (StreamReader fileWithTextToProcessed = new StreamReader(parameter[0]))
             {
                 string singleLineFromText;
                 while ((singleLineFromText = fileWithTextToProcessed.ReadLine()) != null)

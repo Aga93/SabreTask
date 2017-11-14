@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ProcessedInputText
 {
-    class TextProcessor
+    class Replacer 
     {
+        
         public static List<string> ReplaceText(List<string> inputText)
         {
-            Console.WriteLine("Enter word to replace");
-            string oldTextValue = Console.ReadLine();
-            Console.WriteLine("Enter new text");
-            string newTextValue = Console.ReadLine();
-
+            string oldValue = GetWordForReplacer.OldTextValue();
+            string newValue = GetWordForReplacer.NewTextValue();
             List<string> outputText = new List<string>();
+            if(inputText == null)
+            {
+                return new List<string>();
+            }
             foreach (string line in inputText)
             {
                 if (line != null && line.Length > 0)
                 {
-                    outputText.Add(line.Replace(oldTextValue, newTextValue));
+                    outputText.Add(line.Replace(oldValue,newValue));
                 }
                 else
                 {
