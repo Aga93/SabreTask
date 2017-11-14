@@ -21,11 +21,11 @@ namespace ProcessedInputText
             }
             else if (userInput[0] == "1")
             {
-                inputText = ReadTextFromFile(parameter);
+                inputText = GetTextToProcessed.ReadTextFromFile(parameter);
             }
             else if (userInput[0] == "2")
             {
-                inputText = ReadTextFromConsole();
+                inputText = GetTextToProcessed.ReadTextFromConsole();
             }
 
             if (userInput.Length == 1)
@@ -37,37 +37,6 @@ namespace ProcessedInputText
                 return inputText.GetRange(int.Parse(userInput[1]), int.Parse(userInput[2]));
             }
             return null;
-        }
-        public static List<string> ReadTextFromFile(string[] parameter)
-        {
-            List<string> textFromFile = new List<string>();
-           
-            
-            using (StreamReader fileWithTextToProcessed = new StreamReader(parameter[0]))
-            {
-                string singleLineFromText;
-                while ((singleLineFromText = fileWithTextToProcessed.ReadLine()) != null)
-                {
-                    textFromFile.Add(singleLineFromText);
-                }
-            };
-            return textFromFile;
-        }
-
-        public static List<string> ReadTextFromConsole()
-        {
-            List<string> textFromConsole = new List<string>();
-            Console.WriteLine("Enter your input text. If you want to finish - write 'end' in new line and press Enter.");
-            while (true)
-            {
-                string line = Console.ReadLine();
-                if (line == "end")
-                {
-                    break;
-                }
-                textFromConsole.Add(line);
-            }
-            return textFromConsole;
         }
     }
 }

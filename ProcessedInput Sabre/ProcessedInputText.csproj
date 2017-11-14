@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetTextToProcessed.cs" />
     <Compile Include="GetWordForReplacer.cs" />
     <Compile Include="InputReader.cs" />
     <Compile Include="Program.cs" />
