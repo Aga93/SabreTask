@@ -6,12 +6,12 @@ namespace ProcessedInputText
 {
     class InputReader
     {
-        public static List<string> ReadTextFromFile(string[] parameter)
+        public static List<string> ReadTextFromFile(string[] parameters)
         {
             List<string> textFromFile = new List<string>();
 
 
-            using (StreamReader fileWithTextToProcessed = new StreamReader(parameter[0]))
+            using (StreamReader fileWithTextToProcessed = new StreamReader(parameters[0]))
             {
                 string singleLineFromText;
                 while ((singleLineFromText = fileWithTextToProcessed.ReadLine()) != null)
