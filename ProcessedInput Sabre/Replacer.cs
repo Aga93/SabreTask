@@ -7,8 +7,8 @@ namespace ProcessedInputText
         
         public static List<string> ReplaceText(List<string> inputText)
         {
-            string oldValue = GetWordForReplacer.OldTextValue();
-            string newValue = GetWordForReplacer.NewTextValue();
+            string oldValue = GetValueForReplacer.OldTextValue();
+            string newValue = GetValueForReplacer.NewTextValue();
             List<string> outputText = new List<string>();
             if(inputText == null)
             {

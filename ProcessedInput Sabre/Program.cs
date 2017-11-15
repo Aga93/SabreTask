@@ -7,11 +7,11 @@ namespace ProcessedInputText
     {
         static void Main(string[] args)
         {
-            List<string> inputText = InputTextReader.GetInputText(args);
+            List<string> inputText = InputSelector.GetInputText(args);
 
             List<string> processedText = Replacer.ReplaceText(inputText);
 
-            OutputWriter.SelectOutputType(processedText);
+            OutputSelector.SelectOutputType(processedText);
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ProcessedInputText
 {
-    class GetWordForReplacer 
+    class GetValueForReplacer 
     {
         public static string OldTextValue()
         {
